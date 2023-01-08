@@ -59,16 +59,16 @@ const scrollDisplayAnimation = (event) => {
 }
 
 // Fonction pour vérifier le support et ajuster la vidéo en conséquence
-const videoCheck = () => {
+// const videoCheck = () => {
 
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+//     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     
-    if (!isMobile) {
-        video.src = './public/assets/autre/oiseaux2.mp4';
-    } else {
-        video.src = './public/assets/autre/oiseaux.mp4';
-    }
-}
+//     if (!isMobile) {
+//         video.src = './public/assets/autre/oiseaux2.mp4';
+//     } else {
+//         video.src = './public/assets/autre/oiseaux.mp4';
+//     }
+// }
 
 
 // Fonction de vérification des données entrées dans le formulaire
@@ -134,7 +134,7 @@ const formVerification = (event) => {
 }
 
 // Déclaration des évènements
-window.addEventListener('load', videoCheck);
+// window.addEventListener('load', videoCheck);
 window.addEventListener('load', () => {
     music.play();
     music.volume = 0.5;
