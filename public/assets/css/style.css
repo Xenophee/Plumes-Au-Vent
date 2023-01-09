@@ -1,22 +1,14 @@
-/* https://lottiefiles.com/search?q=bird&category=animations&animations-page=4 */
-/* https://www.notretemps.com/loisirs/tourisme/six-sites-pour-observer-les-oiseaux-en-france-24123 */
-/* https://pixabay.com/fr/videos/search/bird/?manual_search=1&cat=None */
-/* https://git-lfs.com/ */
-/* https://convertio.co/fr/ */
-/* https://www.xconvert.com/compress-webp */
 
 * {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.1rem;
 }
+
 body {
     background-image: url(../img/background.webp);
     background-size: 800px;
-    /* background-image: #fef8e2; */
-    /* backdrop-filter: sepia(0.9) opacity(0.9); */
+    overflow-x: hidden;
 }
-
-    
 
 nav {
     background-color: #4d433a !important;
@@ -68,8 +60,6 @@ h1, h2, h3, h4 {
 
 h1 {
     color: #fef8e2;
-    /* text-decoration: underline;
-    text-underline-offset: 3px; */
     border-color: #fef8e2;
     background-color: #4d433a;
     border-width: 3px;
