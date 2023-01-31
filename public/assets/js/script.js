@@ -17,6 +17,7 @@ const site = document.getElementById('site');
 const personsNumber = document.getElementById('personsNumber');
 
 // Sélection des div où vont apparaître le message d'erreur
+const errorMessage = document.querySelectorAll('.errorMessage');
 const lastnameNone = document.querySelector('.lastnameNone');
 const lastnameWarning = document.querySelector('.lastnameWarning');
 const firstnameNone = document.querySelector('.firstnameNone');
@@ -71,11 +72,27 @@ const scrollDisplayAnimation = (event) => {
 // }
 
 
-// Fonction de vérification des données entrées dans le formulaire
-const formVerification = (event) => {
 
-    event.preventDefault();
-    
+// Déclaration des évènements
+// window.addEventListener('load', videoCheck);
+
+
+// window.addEventListener('load', () => {
+//     music.play();
+//     music.volume = 0.5;
+//     music.loop = true;
+// });
+
+
+window.addEventListener('scroll', scrollDisplayAnimation);
+
+personsNumber.addEventListener('input', () => {
+    number.textContent = personsNumber.value;
+});
+
+
+const lastnameValidation = () => {
+
     if (lastname.value == '') {
         lastnameNone.classList.remove('hide');
         lastnameWarning.classList.add('hide');
@@ -89,6 +106,9 @@ const formVerification = (event) => {
         lastnameNone.classList.add('hide');
         lastname.classList.remove('invalid');
     }
+}
+
+const firstnameValidation = () => {
 
     if (firstname.value == '') {
         firstnameNone.classList.remove('hide');
@@ -103,7 +123,10 @@ const formVerification = (event) => {
         firstnameNone.classList.add('hide');
         firstname.classList.remove('invalid');
     }
-    
+}
+
+const emailValidation = () => {
+
     if (email.value == '') {
         emailNone.classList.remove('hide');
         emailWarning.classList.add('hide');
@@ -117,14 +140,28 @@ const formVerification = (event) => {
         emailNone.classList.add('hide');
         email.classList.remove('invalid');
     }
+}
+
+const siteValidation = () => {
+
+    console.log(site.value);
 
     if (site.value == '') {
         siteNone.classList.remove('hide');
         site.classList.add('invalid');
+
+        // marche pas
+    } else if (site.value < 1 || site.value > 7) {
+        siteNone.classList.remove('hide');
+        site.classList.add('invalid');
+
     } else {
         siteNone.classList.add('hide');
         site.classList.remove('invalid');
     }
+}
+
+const personsValidation = () => {
 
     if (personsNumber.value == 0) {
         personsNone.classList.remove('hide');
@@ -133,19 +170,21 @@ const formVerification = (event) => {
     }
 }
 
-// Déclaration des évènements
-// window.addEventListener('load', videoCheck);
-window.addEventListener('load', () => {
-    music.play();
-    music.volume = 0.5;
-    music.loop = true;
-});
-window.addEventListener('scroll', scrollDisplayAnimation);
-form.addEventListener('submit', formVerification);
+// const formSend = (event) => {
+//     if (!errorMessage.textContent == '') {
+//         event.preventDefault();
+//     } else {
+//         form.submit();
+//     }
+// }
 
-personsNumber.addEventListener('input', () => {
-    number.textContent = personsNumber.value;
-});
+console.log(errorMessage.textContent);
+lastname.addEventListener('blur', lastnameValidation);
+firstname.addEventListener('blur', firstnameValidation);
+email.addEventListener('blur', emailValidation);
+site.addEventListener('blur', siteValidation);
+personsNumber.addEventListener('blur', personsValidation);
+// form.addEventListener('submit', formSend);
 
 
 

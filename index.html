@@ -1269,25 +1269,25 @@
                         <form name="formContact">
                             <div class="mb-3">
                                 <label for="lastname" class="form-label">Nom * :</label>
-                                <input type="text" class="form-control" id="lastname">
-                                <div class="lastnameNone text-danger hide">Veuillez entrer un nom</div>
-                                <div class="lastnameWarning text-danger hide">Veuillez entrer un nom valide</div>
+                                <input type="text" class="form-control" pattern="^[a-zA-ZÀ-ÿ]{2,}$" id="lastname"required>
+                                <div class="lastnameNone text-danger hide errorMessage">Veuillez entrer un nom</div>
+                                <div class="lastnameWarning text-danger hide errorMessage">Veuillez entrer un nom valide</div>
                             </div>
                             <div class="mb-3">
                                 <label for="firstname" class="form-label">Prénom * :</label>
-                                <input type="text" class="form-control" id="firstname" >
-                                <div class="firstnameNone text-danger hide">Veuillez entrer un prénom</div>
-                                <div class="firstnameWarning text-danger hide">Veuillez entrer un prénom valide</div>
+                                <input type="text" class="form-control" pattern="^[a-zA-ZÀ-ÿ]{2,}$" id="firstname" required>
+                                <div class="firstnameNone text-danger hide errorMessage">Veuillez entrer un prénom</div>
+                                <div class="firstnameWarning text-danger hide errorMessage">Veuillez entrer un prénom valide</div>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Adresse mail * :</label>
-                                <input type="text" class="form-control" id="email" oninvalid="">
-                                <div class="emailNone text-danger hide">Veuillez entrer une adresse mail</div>
-                                <div class="emailWarning text-danger hide">Veuillez entrer un adresse mail valide</div>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="emailNone text-danger hide errorMessage">Veuillez entrer une adresse mail</div>
+                                <div class="emailWarning text-danger hide errorMessage">Veuillez entrer un adresse mail valide</div>
                             </div>
                             <div class="mb-3">
                                 <label for="site" class="form-label">Choisir le site * :</label>
-                                <select class="form-select" aria-label="Default select example" id="site" >
+                                <select class="form-select" id="site" required>
                                     <option value="" selected>-</option>
                                     <option value="1">La réserve des sept-îles</option>
                                     <option value="2">La réserve ornithologique du Teich</option>
@@ -1297,14 +1297,14 @@
                                     <option value="6">Le Parc naturel régional de la Brenne</option>
                                     <option value="7">Pas de site en particulier</option>
                                 </select>
-                                <div class="siteNone text-danger hide">Veuillez choisir un site</div>
+                                <div class="siteNone text-danger hide errorMessage">Veuillez choisir un site</div>
                             </div>
                             <div class="mb-3">
                                 <div class="d-flex">
                                     <label for="personsNumber" class="form-label">Nombre de personnes * :</label><div class="ms-2" id="number"></div>
                                 </div>
                                 <input type="range" class="form-range" min="0" max="10" value="0" id="personsNumber">
-                                <div class="personsNone text-danger hide">Veuillez choisir le nombre de personnes participantes</div>
+                                <div class="personsNone text-danger hide errorMessage">Veuillez choisir le nombre de personnes participantes</div>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message :</label>
@@ -1342,7 +1342,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script> -->
     <script src="./public/assets/js/script.js"></script>
 </body>
 
