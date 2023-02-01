@@ -77,11 +77,11 @@ const scrollDisplayAnimation = (event) => {
 // window.addEventListener('load', videoCheck);
 
 
-// window.addEventListener('load', () => {
-//     music.play();
-//     music.volume = 0.5;
-//     music.loop = true;
-// });
+window.addEventListener('load', () => {
+    music.play();
+    music.volume = 0.5;
+    music.loop = true;
+});
 
 
 window.addEventListener('scroll', scrollDisplayAnimation);
