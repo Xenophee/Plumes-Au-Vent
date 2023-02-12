@@ -38,6 +38,16 @@ video {
     object-fit: cover;
 }
 
+.btnVideo {
+    background-color: #4d433a;
+    color: #fef8e2;
+}
+
+.btnVideo:hover {
+    background-color: #4d433a;
+    color: #fef8e2;
+}
+
 main {
     background-color: #fef8e2;
     border-right: #4d433a;

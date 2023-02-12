@@ -31,7 +31,14 @@ const alert = document.querySelector('.alert');
 // Sélection du formulaire et de la vidéo
 const form = document.forms['formContact'];
 const video = document.querySelector('video');
+const activeVideo = document.getElementById('activeVideo');
 const number = document.getElementById('number');
+
+
+// video.autoplay = true;
+// video.loop = true;
+// video.play();
+
 
 console.log();
 
@@ -184,6 +191,20 @@ firstname.addEventListener('blur', firstnameValidation);
 email.addEventListener('blur', emailValidation);
 site.addEventListener('blur', siteValidation);
 personsNumber.addEventListener('blur', personsValidation);
+
+// Activation ou pause de la vidéo avec le bouton
+activeVideo.addEventListener('click', () => {
+
+    if (video.paused) {
+        video.play();
+        activeVideo.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    } else {
+        video.pause();
+        activeVideo.innerHTML = '<i class="fa-solid fa-play"></i>';
+    }
+})
+
+
 // form.addEventListener('submit', formSend);
 
 
