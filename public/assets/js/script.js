@@ -35,11 +35,6 @@ const activeVideo = document.getElementById('activeVideo');
 const number = document.getElementById('number');
 
 
-// video.autoplay = true;
-// video.loop = true;
-// video.play();
-
-
 console.log();
 
 
@@ -49,10 +44,6 @@ const scrollDisplayAnimation = (event) => {
     allStuff.forEach(element => {
 
         const {scrollTop, clientHeight} = document.documentElement;
-        // scrollTop est la hauteur déjà scroll sur le document
-        // clientHeight est la hauteur de l'écran de l'utilisateur
-
-        // Cette méthode permet de déterminer le positionnement dans la page
         const top = element.getBoundingClientRect().top;
 
         if (scrollTop > (scrollTop + top) - clientHeight) {
@@ -65,23 +56,6 @@ const scrollDisplayAnimation = (event) => {
         }
     });
 }
-
-// Fonction pour vérifier le support et ajuster la vidéo en conséquence
-// const videoCheck = () => {
-
-//     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
-//     if (!isMobile) {
-//         video.src = './public/assets/autre/oiseaux2.mp4';
-//     } else {
-//         video.src = './public/assets/autre/oiseaux.mp4';
-//     }
-// }
-
-
-
-// Déclaration des évènements
-// window.addEventListener('load', videoCheck);
 
 
 window.addEventListener('load', () => {
@@ -168,6 +142,7 @@ const siteValidation = () => {
     }
 }
 
+
 const personsValidation = () => {
 
     if (personsNumber.value == 0) {
@@ -177,20 +152,13 @@ const personsValidation = () => {
     }
 }
 
-// const formSend = (event) => {
-//     if (!errorMessage.textContent == '') {
-//         event.preventDefault();
-//     } else {
-//         form.submit();
-//     }
-// }
-
 console.log(errorMessage.textContent);
 lastname.addEventListener('blur', lastnameValidation);
 firstname.addEventListener('blur', firstnameValidation);
 email.addEventListener('blur', emailValidation);
 site.addEventListener('blur', siteValidation);
 personsNumber.addEventListener('blur', personsValidation);
+
 
 // Activation ou pause de la vidéo avec le bouton
 activeVideo.addEventListener('click', () => {
@@ -205,33 +173,9 @@ activeVideo.addEventListener('click', () => {
 })
 
 
-// form.addEventListener('submit', formSend);
 
 
 
-// Pour bien saisir le fonctionnement du scroll
-/* const scrollDisplayAnimation = (event) => {
-
-    allStuff.forEach(element => {
-    // On déclare la variable qui contient deux propriétés (c'est un objet)
-    const {scrollTop, clientHeight} = document.documentElement;
-    // scrollTop est la hauteur déjà scroll sur le document
-    // clientHeight est la hauteur de l'écran de l'utilisateur
-    console.log(scrollTop, clientHeight);
-
-    // Cette méthode permet de déterminer le positionnement dans la page
-    console.log(element.getBoundingClientRect());
-
-    const top = element.getBoundingClientRect().top;
-
-    // Si ce que j'ai scrollé depuis le haut du document devient supérieur à ce que j'ai scrollé depuis le haut du document + la hauteur de mon élément
-    // et le haut de la partie visible, alors j'active l'animation. On ajoute '- clientHeight * 0.55' pour faire démarrer l'animation plus tôt par exemple.
-    // toFixed() permet de retirer les chiffres après la virgule.
-    if (scrollTop > (scrollTop + top).toFixed() - clientHeight * 0.60) {
-        element.classList.add('action');
-    }
-    });
-} */
 
 
 
