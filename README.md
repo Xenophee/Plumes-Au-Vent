@@ -9,7 +9,7 @@ Landing page pour une association fictive de passionnés d'ornithologie qui prop
 
 Pour en savoir plus, vous pouvez consulter la page de mon [portfolio](https://perrine-dassonville.dev/portfolio/projet/plumes-au-vent) dédiée au projet.
 
-Le site est en ligne : [ici](https://xenophee.github.io/Landing-Page-Oiseaux--Demo/)
+Le site est en ligne : [ici](https://xenophee.github.io/Plumes-Au-Vent/)
 
 
 ## Installation
