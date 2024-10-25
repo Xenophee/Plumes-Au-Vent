@@ -1,22 +1,26 @@
-# Landing-Page-Oiseaux
+<h1 align="center">Plumes au Vent</h1>
 
-La démo est en ligne : [ici](https://xenophee.github.io/Landing-Page-Oiseaux--Demo/)
-
-
-## Description du projet
-
-Le but du projet était de réaliser une landing page visant la promotion de parcours d’observations d’oiseaux sauvages par l’association fictive Plumes au vent.
+<img src="/preview.jpg" alt="Logo de l'application">
 
 
-Une refonte est à l’étude sur ce projet afin de changer de framework (actuellement Bootstrap) et permettre ainsi l’apprentissage d’un nouveau.
+## Contexte du projet
 
-Une version avec l’utilisation de PHP & MySQL est également prévue et sera réalisée plus tard.
+Landing page pour une association fictive de passionnés d'ornithologie qui propose des parcours de découverte des oiseaux de France.
+
+Pour en savoir plus, vous pouvez consulter la page de mon [portfolio](https://perrine-dassonville.dev/portfolio/projet/plumes-au-vent) dédiée au projet.
+
+Le site est en ligne : [ici](https://xenophee.github.io/Landing-Page-Oiseaux--Demo/)
 
 
-## Correctifs à réaliser
+## Installation
 
-- [ ] Refaire la vidéo
-- [ ] Améliorer l'interaction avec le formulaire
-- [ ] Améliorations visuelles grâce à des animations
-- [ ] Petit soucis de style sur l'input type range
-- [ ] Contenu textuel à peaufiner
+Rien de bien compliqué vu qu'il s'agit d'un de mes premiers projets. Voici comment vous pouvez le visualiser en local :
+
+1. Clonez le dépôt :
+    ```bash
+    git clone https://github.com/Xenophee/Plumes-Au-Vent.git
+    ```
+
+2. Ouvrez le fichier `index.html` dans votre navigateur pour voir le site.
+
+
